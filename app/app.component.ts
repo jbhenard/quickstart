@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   template: `
     <h1>My First {{projectName}}</h1>
     <input [(ngModel)]="projectName">
-    <button (click)="sayHello()">Hello</button>
+    <button *ngIf="projectName" (click)="sayHello()">Hello</button>
   `
 })
 export class AppComponent {
